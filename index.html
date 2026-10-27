@@ -726,7 +726,7 @@
     </section>
   </main>
 
-  
+
 <!-- PRAYER REQUEST SECTION -->
 <section class="prayer-section" id="prayer">
   <div class="prayer-container">
@@ -734,7 +734,9 @@
     <div class="prayer-heading">
       <span class="prayer-icon">✝</span>
 
-      <p class="prayer-label">WE ARE HERE TO PRAY WITH YOU</p>
+      <p class="prayer-label">
+        WE ARE HERE TO PRAY WITH YOU
+      </p>
 
       <h2>How Can We <span>Pray for You?</span></h2>
 
@@ -748,53 +750,63 @@
         "Pray without ceasing." — 1 Thessalonians 5:17
       </p>
     </div>
-  
-<form
-  class="prayer-form"
-  action="https://formsubmit.co/citbc.intl@gmail.com"
-  method="POST">
 
-  <input
-    type="hidden"
-    name="_subject"
-    value="New Prayer Request - CITBC Website">
+    <!-- COMPLETE PRAYER FORM -->
+    <form
+      class="prayer-form"
+      action="https://formsubmit.co/citbc.intl@gmail.com"
+      method="POST">
 
-  <input
-    type="hidden"
-    name="_template"
-    value="table">
+      <!-- EMAIL SETTINGS -->
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Prayer Request - CITBC Website">
 
-  <input
-    type="hidden"
-    name="_captcha"
-    value="true">
+      <input
+        type="hidden"
+        name="_template"
+        value="table">
 
-  <!-- Keep your existing name, email, prayer request,
-       consent fields, and submit button here. -->
+      <input
+        type="hidden"
+        name="_captcha"
+        value="true">
 
-</form>
-
-
+      <!-- NAME -->
       <div class="prayer-field">
-        <label for="prayer-name">Your Name (Optional)</label>
+        <label for="prayer-name">
+          Your Name (Optional)
+        </label>
+
         <input
           type="text"
           id="prayer-name"
           name="Name"
-          placeholder="Enter your name">
+          placeholder="Enter your name"
+          autocomplete="name">
       </div>
 
+      <!-- EMAIL -->
       <div class="prayer-field">
-        <label for="prayer-email">Email Address (Optional)</label>
+        <label for="prayer-email">
+          Email Address (Optional)
+        </label>
+
         <input
           type="email"
           id="prayer-email"
           name="Reply Email"
-          placeholder="Enter your email address">
+          placeholder="Enter your email address"
+          autocomplete="email">
       </div>
 
+      <!-- PRAYER REQUEST -->
       <div class="prayer-field">
-        <label for="prayer-request">Your Prayer Request *</label>
+        <label for="prayer-request">
+          Your Prayer Request *
+        </label>
+
         <textarea
           id="prayer-request"
           name="Prayer Request"
@@ -803,31 +815,38 @@
           required></textarea>
       </div>
 
+      <!-- PRIVACY CONSENT -->
       <label class="prayer-consent">
         <input
           type="checkbox"
           name="Privacy Consent"
           value="Agreed"
           required>
+
         <span>
-          I understand that my prayer request will be sent
-          to the church for prayer and pastoral care.
+          I agree to send my prayer request to Christ Is
+          Truth Baptist Church International for prayer
+          and pastoral care.
         </span>
       </label>
 
+      <!-- SUBMIT BUTTON -->
       <button type="submit" class="prayer-submit">
         SEND PRAYER REQUEST
       </button>
 
       <p class="prayer-note">
         Your request will be sent to the church email.
-        Please avoid including passwords or other sensitive
-        personal information.
+        Please avoid including passwords or other
+        sensitive personal information.
       </p>
 
     </form>
+    <!-- END PRAYER FORM -->
+
   </div>
 </section>
+<!-- END PRAYER REQUEST SECTION -->
 
   <!-- FOOTER -->
   <footer id="contact">
