@@ -169,34 +169,73 @@
       background: #ffffff;
     }
 
-    .history-content {
-      max-width: 1050px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      align-items: center;
-      gap: 45px;
-    }
-
-    .history-image {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      border-radius: 10px;
-      background: #edf0f5;
-    }
-
-    .history-text h3 {
-      color: #17243a;
-      font-size: 26px;
-      margin-bottom: 15px;
-    }
-
-    .history-text p {
+    .history-description {
+      max-width: 900px;
+      margin: 0 auto 30px;
       color: #596273;
       font-size: 15px;
       line-height: 1.9;
-      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    /* Horizontal history gallery */
+    .history-gallery-wrap {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    .history-gallery {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 8px 4px 18px;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: #c6a34e #edf0f5;
+    }
+
+    .history-gallery::-webkit-scrollbar {
+      height: 9px;
+    }
+
+    .history-gallery::-webkit-scrollbar-track {
+      background: #edf0f5;
+      border-radius: 20px;
+    }
+
+    .history-gallery::-webkit-scrollbar-thumb {
+      background: #c6a34e;
+      border-radius: 20px;
+    }
+
+    .history-card {
+      flex: 0 0 340px;
+      overflow: hidden;
+      scroll-snap-align: start;
+      border: 1px solid #e6e9ef;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 6px 20px rgba(17,35,61,.08);
+    }
+
+    .history-image {
+      display: block;
+      width: 100%;
+      height: 245px;
+      object-fit: cover;
+      background: #edf0f5;
+    }
+
+
+
+    .gallery-hint {
+      margin-top: 8px;
+      text-align: center;
+      color: #7a8494;
+      font-size: 12px;
     }
 
     /* SECTION 2: VISION & MISSION */
@@ -334,10 +373,6 @@
         font-size: 12px;
       }
 
-      .history-content {
-        gap: 25px;
-      }
-
       .trustees-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -417,13 +452,16 @@
         margin-bottom: 28px;
       }
 
-      .history-content {
-        grid-template-columns: 1fr;
-        gap: 24px;
+      .history-card {
+        flex-basis: 82%;
       }
 
-      .history-text h3 {
-        font-size: 23px;
+      .history-image {
+        height: 220px;
+      }
+
+      .history-description {
+        text-align: left;
       }
 
       .vision-grid {
@@ -516,50 +554,50 @@ Our identity is no longer defined by who we were, but by whom we have become in 
 </p>
 </section>
 
-  <!-- SECTION 1: HISTORY -->
+  <!-- SECTION 1: HISTORY GALLERY -->
   <section class="section history-section" id="history">
 
     <div class="section-heading">
       <p class="eyebrow">OUR BEGINNINGS</p>
-      <h2>Our <span>History</span></h2>
+      <h2>Our <span>Seed Project 2010</span></h2>
       <p>
-        Discover the story and journey of
-        Christ Is TRUTH Baptist Church International.
+        During this time, Pastor Paul Tanchi, son of Pastor Peter Tanchi of Christ’s Commission Fellowship (CCF), envisioned expanding God’s Kingdom by initiating Bible studies in various AXEIA project sites—an outreach ministry known as the “Seed Project.”
+        Seeking to nurture spiritual growth among construction workers stationed in their subdivision developments, he looked for pastors who could lead these Bible study gatherings. One of these project sites was Alta Tierra Homes in General Mariano Alvarez, Cavite.
+        During the pioneering stage of the ministry, Engineer Pedro Mones worked alongside and assisted Pastor Domingo Ranay, helping lay the groundwork for what would eventually become a growing church.
       </p>
     </div>
 
-    <div class="history-content">
+    <p class="history-description">
+      Explore moments from our church's journey of faith. Scroll horizontally to view more photographs.
+    </p>
 
-      <!-- Replace with your actual church history image -->
-      <img
-        src="Images/church_history.jpg"
-        alt="Christ Is TRUTH Baptist Church history"
-        class="history-image">
+    <div class="history-gallery-wrap">
+      <div class="history-gallery" aria-label="Church history photo gallery" tabindex="0">
 
-      <div class="history-text">
-        <h3>A Journey of Faith</h3>
+        <article class="history-card">
+          <img src="Images/history_b.jpg" alt="Christ Is TRUTH Baptist Church historical photograph" class="history-image" loading="lazy">
+        </article>
 
-        <p>
-          Christ Is TRUTH Baptist Church International
-          is committed to honoring God, proclaiming the
-          truth of His Word, and sharing the message of
-          Jesus Christ.
-        </p>
+        <article class="history-card">
+          <img src="Images/history_2.jpg" alt="Church history and early ministry" class="history-image" loading="lazy">
+        </article>
 
-        <p>
-          Through worship, fellowship, and Christian
-          service, our desire is to encourage believers
-          to grow in faith and to make Christ known.
-        </p>
+        <article class="history-card">
+          <img src="Images/history_3.jpg" alt="Church members gathered during a ministry activity" class="history-image" loading="lazy">
+        </article>
 
-        <p>
-          Our church history, founding date, and
-          important milestones will be presented here
-          using the official information of our church.
-        </p>
+        <article class="history-card">
+          <img src="Images/history_4.jpg" alt="Church gathering or ministry event" class="history-image" loading="lazy">
+        </article>
+
+        <article class="history-card">
+          <img src="Images/history_5.jpg" alt="Christ Is TRUTH Baptist Church community activity" class="history-image" loading="lazy">
+        </article>
+
       </div>
-
+      <p class="gallery-hint">← Scroll or swipe sideways to see more photos →</p>
     </div>
+
   </section>
 
   <!-- SECTION 2: VISION AND MISSION -->
