@@ -440,6 +440,173 @@
       }
     }
 
+    
+/* PRAYER REQUEST SECTION */
+.prayer-section {
+  background: linear-gradient(135deg, #0b1930, #172d4c);
+  padding: 80px 20px;
+  color: #ffffff;
+}
+
+.prayer-container {
+  max-width: 720px;
+  margin: auto;
+}
+
+.prayer-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.prayer-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border: 1px solid #d8b765;
+  border-radius: 50%;
+  color: #e5c779;
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+
+.prayer-label {
+  color: #e5c779;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.prayer-heading h2 {
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.prayer-heading h2 span {
+  color: #e5c779;
+}
+
+.prayer-description {
+  color: #e0e6ef;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 580px;
+  margin: 0 auto 18px;
+}
+
+.prayer-verse {
+  color: #e5c779;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.prayer-form {
+  background: #ffffff;
+  color: #17243a;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.prayer-field {
+  margin-bottom: 22px;
+}
+
+.prayer-field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+.prayer-field input,
+.prayer-field textarea {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font: inherit;
+  font-size: 15px;
+  color: #17243a;
+  background: #f8f9fc;
+  border: 1px solid #d9dfeb;
+  border-radius: 5px;
+}
+
+.prayer-field textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.prayer-field input:focus,
+.prayer-field textarea:focus {
+  outline: 2px solid #d8b765;
+  outline-offset: 1px;
+}
+
+.prayer-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #596273;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.prayer-consent input {
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.prayer-submit {
+  width: 100%;
+  min-height: 50px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #d8b765;
+  color: #101d32;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  cursor: pointer;
+}
+
+.prayer-submit:hover {
+  background: #f0d895;
+}
+
+.prayer-note {
+  color: #70798a;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+  margin-top: 18px;
+}
+
+@media (max-width: 650px) {
+  .prayer-section {
+    padding: 55px 16px;
+  }
+
+  .prayer-form {
+    padding: 22px 17px;
+  }
+
+  .prayer-description {
+    font-size: 15px;
+  }
+
+  .prayer-field input,
+  .prayer-field textarea {
+    font-size: 16px;
+  }
+}
+
+
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
@@ -558,6 +725,109 @@
       </p>
     </section>
   </main>
+
+  
+<!-- PRAYER REQUEST SECTION -->
+<section class="prayer-section" id="prayer">
+  <div class="prayer-container">
+
+    <div class="prayer-heading">
+      <span class="prayer-icon">✝</span>
+
+      <p class="prayer-label">WE ARE HERE TO PRAY WITH YOU</p>
+
+      <h2>How Can We <span>Pray for You?</span></h2>
+
+      <p class="prayer-description">
+        Whatever you are going through, you don't have to
+        face it alone. Share your prayer request with us.
+        It would be our privilege to pray with you.
+      </p>
+
+      <p class="prayer-verse">
+        "Pray without ceasing." — 1 Thessalonians 5:17
+      </p>
+    </div>
+  
+<form
+  class="prayer-form"
+  action="https://formsubmit.co/citbc.intl@gmail.com"
+  method="POST">
+
+  <input
+    type="hidden"
+    name="_subject"
+    value="New Prayer Request - CITBC Website">
+
+  <input
+    type="hidden"
+    name="_template"
+    value="table">
+
+  <input
+    type="hidden"
+    name="_captcha"
+    value="true">
+
+  <!-- Keep your existing name, email, prayer request,
+       consent fields, and submit button here. -->
+
+</form>
+
+
+      <div class="prayer-field">
+        <label for="prayer-name">Your Name (Optional)</label>
+        <input
+          type="text"
+          id="prayer-name"
+          name="Name"
+          placeholder="Enter your name">
+      </div>
+
+      <div class="prayer-field">
+        <label for="prayer-email">Email Address (Optional)</label>
+        <input
+          type="email"
+          id="prayer-email"
+          name="Reply Email"
+          placeholder="Enter your email address">
+      </div>
+
+      <div class="prayer-field">
+        <label for="prayer-request">Your Prayer Request *</label>
+        <textarea
+          id="prayer-request"
+          name="Prayer Request"
+          rows="5"
+          placeholder="How can we pray for you?"
+          required></textarea>
+      </div>
+
+      <label class="prayer-consent">
+        <input
+          type="checkbox"
+          name="Privacy Consent"
+          value="Agreed"
+          required>
+        <span>
+          I understand that my prayer request will be sent
+          to the church for prayer and pastoral care.
+        </span>
+      </label>
+
+      <button type="submit" class="prayer-submit">
+        SEND PRAYER REQUEST
+      </button>
+
+      <p class="prayer-note">
+        Your request will be sent to the church email.
+        Please avoid including passwords or other sensitive
+        personal information.
+      </p>
+
+    </form>
+  </div>
+</section>
 
   <!-- FOOTER -->
   <footer id="contact">
