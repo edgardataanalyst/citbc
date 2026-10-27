@@ -1,15 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="theme-color" content="#0b1930">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="Welcome to Christ Is TRUTH Baptist Church International. Worship, grow in faith, and discover the truth of God's Word.">
 
   <title>CITBC | Christ Is TRUTH Baptist Church International</title>
 
   <style>
+    /* =========================
+       GENERAL
+    ========================= */
     * {
       margin: 0;
       padding: 0;
@@ -18,38 +21,45 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 85px;
+      scroll-padding-top: 90px;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f8f7f3;
-      color: #ffffff;
+      background: #ffffff;
+      color: #17243a;
       overflow-x: hidden;
     }
 
-    /* HEADER */
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* =========================
+       HEADER - WHITE BACKGROUND
+    ========================= */
     header {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       min-height: 90px;
-      padding: 15px 5%;
+      padding: 12px 5%;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
       z-index: 100;
     }
 
-    /* LOGO AND CHURCH NAME */
     .brand {
       display: flex;
       align-items: center;
       gap: 12px;
-      text-decoration: none;
       min-width: 0;
+      text-decoration: none;
     }
 
     .church-logo {
@@ -63,16 +73,19 @@
       display: flex;
       flex-direction: column;
       gap: 3px;
-      color: #ffffff;
+      color: #17243a;
+      min-width: 0;
     }
 
     .logo-text strong {
+      color: #17243a;
       font-size: 23px;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
+      line-height: 1.2;
     }
 
     .logo-text span {
-      color: #e5c779;
+      color: #9a7626;
       font-size: 9px;
       letter-spacing: 1px;
       line-height: 1.5;
@@ -86,7 +99,7 @@
     }
 
     nav a {
-      color: #ffffff;
+      color: #17243a;
       text-decoration: none;
       font-size: 14px;
       font-weight: 600;
@@ -94,26 +107,28 @@
     }
 
     nav a:hover {
-      color: #e5c779;
+      color: #b18b38;
     }
 
-    /* MOBILE MENU BUTTON */
+    /* HAMBURGER BUTTON */
     .menu-toggle {
       display: none;
       align-items: center;
       justify-content: center;
-      background: transparent;
-      color: #ffffff;
-      border: 1px solid rgba(255,255,255,0.6);
-      border-radius: 5px;
       width: 44px;
       height: 42px;
+      background: #ffffff;
+      color: #17243a;
+      border: 1px solid #d9dfeb;
+      border-radius: 5px;
       font-size: 24px;
       cursor: pointer;
       flex-shrink: 0;
     }
 
-    /* HERO / WELCOME SECTION */
+    /* =========================
+       HERO / WELCOME SECTION
+    ========================= */
     .hero {
       position: relative;
       min-height: 100vh;
@@ -126,8 +141,8 @@
 
       background:
         linear-gradient(
-          rgba(7, 20, 42, 0.78),
-          rgba(7, 20, 42, 0.90)
+          rgba(7, 20, 42, 0.60),
+          rgba(7, 20, 42, 0.78)
         ),
         url("Images/citbc_background.jpg");
 
@@ -166,7 +181,7 @@
     .subtitle {
       max-width: 680px;
       margin: 0 auto 20px;
-      color: #e5e9f0;
+      color: #f0f3f8;
       font-size: 17px;
       line-height: 1.8;
     }
@@ -179,7 +194,7 @@
       margin-bottom: 32px;
     }
 
-    /* BUTTONS */
+    /* HERO BUTTONS */
     .buttons {
       display: flex;
       justify-content: center;
@@ -222,16 +237,20 @@
       color: #101d32;
     }
 
-    /* ABOUT / WELCOME MESSAGE */
+    /* =========================
+       ABOUT AND MINISTRIES
+    ========================= */
     .welcome {
       color: #26334a;
       text-align: center;
       padding: 75px 24px;
       max-width: 900px;
       margin: auto;
+      scroll-margin-top: 30px;
     }
 
     .welcome h2 {
+      color: #17243a;
       font-size: clamp(26px, 4vw, 36px);
       line-height: 1.3;
       margin-bottom: 20px;
@@ -247,17 +266,185 @@
       line-height: 1.9;
     }
 
-    /* FOOTER */
-    footer {
-      background: #0b1930;
-      color: #cbd2df;
-      text-align: center;
-      padding: 24px 18px;
-      font-size: 13px;
-      line-height: 1.8;
+    /* =========================
+       PRAYER REQUEST SECTION
+    ========================= */
+    .prayer-section {
+      background: linear-gradient(135deg, #0b1930, #172d4c);
+      padding: 80px 20px;
+      color: #ffffff;
+      scroll-margin-top: 30px;
     }
 
-    /* TABLET */
+    .prayer-container {
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .prayer-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .prayer-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      border: 1px solid #d8b765;
+      border-radius: 50%;
+      color: #e5c779;
+      font-size: 27px;
+      margin-bottom: 20px;
+    }
+
+    .prayer-label {
+      color: #e5c779;
+      font-size: 11px;
+      letter-spacing: 2px;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .prayer-heading h2 {
+      color: #ffffff;
+      font-size: clamp(28px, 5vw, 42px);
+      line-height: 1.25;
+      margin-bottom: 18px;
+    }
+
+    .prayer-heading h2 span {
+      color: #e5c779;
+    }
+
+    .prayer-description {
+      color: #e0e6ef;
+      font-size: 16px;
+      line-height: 1.8;
+      max-width: 580px;
+      margin: 0 auto 18px;
+    }
+
+    .prayer-verse {
+      color: #e5c779;
+      font-size: 14px;
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    .prayer-form {
+      background: #ffffff;
+      color: #17243a;
+      padding: 32px;
+      border-radius: 10px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .prayer-field {
+      margin-bottom: 22px;
+    }
+
+    .prayer-field label {
+      display: block;
+      color: #17243a;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 9px;
+    }
+
+    .prayer-field input,
+    .prayer-field textarea {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      font-family: inherit;
+      font-size: 16px;
+      color: #17243a;
+      background: #f8f9fc;
+      border: 1px solid #d9dfeb;
+      border-radius: 5px;
+    }
+
+    .prayer-field textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .prayer-field input:focus,
+    .prayer-field textarea:focus {
+      outline: 2px solid #d8b765;
+      outline-offset: 1px;
+    }
+
+    .prayer-consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #596273;
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    .prayer-consent input {
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .prayer-submit {
+      width: 100%;
+      min-height: 50px;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 5px;
+      background: #d8b765;
+      color: #101d32;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.7px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .prayer-submit:hover {
+      background: #f0d895;
+    }
+
+    .prayer-note {
+      color: #70798a;
+      font-size: 12px;
+      line-height: 1.7;
+      text-align: center;
+      margin-top: 18px;
+    }
+
+    /* =========================
+       FOOTER - WHITE BACKGROUND
+    ========================= */
+    footer {
+      background: #ffffff;
+      color: #26334a;
+      text-align: center;
+      padding: 30px 18px;
+      font-size: 13px;
+      line-height: 1.9;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    footer p {
+      color: #26334a;
+      margin-bottom: 5px;
+    }
+
+    footer p:last-child {
+      color: #6b7280;
+      font-size: 12px;
+    }
+
+    /* =========================
+       TABLET
+    ========================= */
     @media (max-width: 900px) {
       header {
         padding-left: 4%;
@@ -287,7 +474,9 @@
       }
     }
 
-    /* MOBILE */
+    /* =========================
+       MOBILE
+    ========================= */
     @media (max-width: 650px) {
       header {
         min-height: 78px;
@@ -324,10 +513,11 @@
         left: 0;
         width: 100%;
         padding: 10px 20px 20px;
-        background: #0b1930;
+        background: #ffffff;
         flex-direction: column;
         align-items: stretch;
         gap: 0;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
       }
 
       nav.open {
@@ -337,7 +527,8 @@
       nav a {
         display: block;
         padding: 15px 8px;
-        border-bottom: 1px solid rgba(255,255,255,0.12);
+        border-bottom: 1px solid #eeeeee;
+        color: #17243a;
         font-size: 15px;
       }
 
@@ -391,7 +582,20 @@
         line-height: 1.85;
       }
 
+      .prayer-section {
+        padding: 55px 16px;
+      }
+
+      .prayer-form {
+        padding: 22px 17px;
+      }
+
+      .prayer-description {
+        font-size: 15px;
+      }
+
       footer {
+        padding: 25px 15px;
         font-size: 12px;
       }
     }
@@ -440,173 +644,7 @@
       }
     }
 
-    
-/* PRAYER REQUEST SECTION */
-.prayer-section {
-  background: linear-gradient(135deg, #0b1930, #172d4c);
-  padding: 80px 20px;
-  color: #ffffff;
-}
-
-.prayer-container {
-  max-width: 720px;
-  margin: auto;
-}
-
-.prayer-heading {
-  text-align: center;
-  margin-bottom: 35px;
-}
-
-.prayer-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 55px;
-  height: 55px;
-  border: 1px solid #d8b765;
-  border-radius: 50%;
-  color: #e5c779;
-  font-size: 27px;
-  margin-bottom: 20px;
-}
-
-.prayer-label {
-  color: #e5c779;
-  font-size: 11px;
-  letter-spacing: 2px;
-  margin-bottom: 14px;
-}
-
-.prayer-heading h2 {
-  font-size: clamp(28px, 5vw, 42px);
-  line-height: 1.25;
-  margin-bottom: 18px;
-}
-
-.prayer-heading h2 span {
-  color: #e5c779;
-}
-
-.prayer-description {
-  color: #e0e6ef;
-  font-size: 16px;
-  line-height: 1.8;
-  max-width: 580px;
-  margin: 0 auto 18px;
-}
-
-.prayer-verse {
-  color: #e5c779;
-  font-size: 14px;
-  font-style: italic;
-  line-height: 1.7;
-}
-
-.prayer-form {
-  background: #ffffff;
-  color: #17243a;
-  padding: 32px;
-  border-radius: 10px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-}
-
-.prayer-field {
-  margin-bottom: 22px;
-}
-
-.prayer-field label {
-  display: block;
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 9px;
-}
-
-.prayer-field input,
-.prayer-field textarea {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  font: inherit;
-  font-size: 15px;
-  color: #17243a;
-  background: #f8f9fc;
-  border: 1px solid #d9dfeb;
-  border-radius: 5px;
-}
-
-.prayer-field textarea {
-  resize: vertical;
-  min-height: 130px;
-}
-
-.prayer-field input:focus,
-.prayer-field textarea:focus {
-  outline: 2px solid #d8b765;
-  outline-offset: 1px;
-}
-
-.prayer-consent {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  color: #596273;
-  font-size: 13px;
-  line-height: 1.6;
-  margin-bottom: 22px;
-}
-
-.prayer-consent input {
-  margin-top: 4px;
-  flex-shrink: 0;
-}
-
-.prayer-submit {
-  width: 100%;
-  min-height: 50px;
-  padding: 14px 20px;
-  border: none;
-  border-radius: 5px;
-  background: #d8b765;
-  color: #101d32;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.7px;
-  cursor: pointer;
-}
-
-.prayer-submit:hover {
-  background: #f0d895;
-}
-
-.prayer-note {
-  color: #70798a;
-  font-size: 12px;
-  line-height: 1.7;
-  text-align: center;
-  margin-top: 18px;
-}
-
-@media (max-width: 650px) {
-  .prayer-section {
-    padding: 55px 16px;
-  }
-
-  .prayer-form {
-    padding: 22px 17px;
-  }
-
-  .prayer-description {
-    font-size: 15px;
-  }
-
-  .prayer-field input,
-  .prayer-field textarea {
-    font-size: 16px;
-  }
-}
-
-
+    /* ACCESSIBILITY */
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
@@ -621,21 +659,21 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================= -->
   <header>
     <a href="#home" class="brand" aria-label="CITBC Home">
 
-      <!-- Church logo from repository root -->
       <img
         src="Images/citbc_logo.png"
-        alt="Christ Is Truth Baptist Church International Logo"
-        class="church-logo"
-      >
+        alt="Christ Is TRUTH Baptist Church International Logo"
+        class="church-logo">
 
       <div class="logo-text">
         <strong>Christ is TRUTH</strong>
-        <span>Baptish Church</span>
-        <span>International</span>
+        <span>BAPTIST CHURCH</span>
+        <span>INTERNATIONAL</span>
       </div>
 
     </a>
@@ -654,12 +692,17 @@
       <a href="#home">Home</a>
       <a href="#about">About Us</a>
       <a href="#ministries">Ministries</a>
+      <a href="#prayer">Prayer Request</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- HOME / HERO -->
+  <!-- =========================
+       MAIN CONTENT
+  ========================= -->
   <main>
+
+    <!-- HOME / WELCOME -->
     <section class="hero" id="home">
       <div class="hero-content">
 
@@ -669,7 +712,7 @@
 
         <h1>
           Welcome to<br>
-          <span>Christ Is Truth</span><br>
+          <span>Christ Is TRUTH</span><br>
           Baptist Church<br>
           International
         </h1>
@@ -691,20 +734,20 @@
             LEARN MORE
           </a>
 
-          <a href="#contact" class="btn btn-outline">
-            JOIN US
+          <a href="#prayer" class="btn btn-outline">
+            SUBMIT PRAYER REQUEST
           </a>
         </div>
 
       </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT US -->
     <section class="welcome" id="about">
       <h2>You're <span>Welcome Here</span></h2>
 
       <p>
-        At Christ Is Truth Baptist Church International,
+        At Christ Is TRUTH Baptist Church International,
         our desire is to honor God, proclaim the truth of
         His Word, and encourage people to grow in their
         relationship with Jesus Christ. Whether you are
@@ -714,7 +757,7 @@
       </p>
     </section>
 
-    <!-- MINISTRIES PLACEHOLDER -->
+    <!-- MINISTRIES -->
     <section class="welcome" id="ministries">
       <h2>Our <span>Ministries</span></h2>
 
@@ -724,153 +767,162 @@
         our church ministries will be available here.
       </p>
     </section>
+
   </main>
 
+  <!-- =========================
+       PRAYER REQUEST SECTION
+  ========================= -->
+  <section class="prayer-section" id="prayer">
+    <div class="prayer-container">
 
-<!-- PRAYER REQUEST SECTION -->
-<section class="prayer-section" id="prayer">
-  <div class="prayer-container">
+      <div class="prayer-heading">
+        <span class="prayer-icon" aria-hidden="true">✝</span>
 
-    <div class="prayer-heading">
-      <span class="prayer-icon">✝</span>
+        <p class="prayer-label">
+          WE ARE HERE TO PRAY WITH YOU
+        </p>
 
-      <p class="prayer-label">
-        WE ARE HERE TO PRAY WITH YOU
-      </p>
+        <h2>How Can We <span>Pray for You?</span></h2>
 
-      <h2>How Can We <span>Pray for You?</span></h2>
+        <p class="prayer-description">
+          Whatever you are going through, you don't have
+          to face it alone. Share your prayer request
+          with us. It would be our privilege to pray
+          with you.
+        </p>
 
-      <p class="prayer-description">
-        Whatever you are going through, you don't have to
-        face it alone. Share your prayer request with us.
-        It would be our privilege to pray with you.
-      </p>
+        <p class="prayer-verse">
+          "Pray without ceasing." — 1 Thessalonians 5:17
+        </p>
+      </div>
 
-      <p class="prayer-verse">
-        "Pray without ceasing." — 1 Thessalonians 5:17
-      </p>
+      <!--
+        PRAYER FORM
+        FormSubmit sends submissions to CITBC email.
+        The recipient must activate the form by email first.
+      -->
+      <form
+        class="prayer-form"
+        action="https://formsubmit.co/citbc.intl@gmail.com"
+        method="POST">
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Prayer Request - CITBC Website">
+
+        <input
+          type="hidden"
+          name="_template"
+          value="table">
+
+        <!-- FormSubmit spam protection -->
+        <input
+          type="hidden"
+          name="_captcha"
+          value="true">
+
+        <!-- NAME -->
+        <div class="prayer-field">
+          <label for="prayer-name">
+            Your Name (Optional)
+          </label>
+
+          <input
+            type="text"
+            id="prayer-name"
+            name="Name"
+            placeholder="Enter your name"
+            autocomplete="name">
+        </div>
+
+        <!-- EMAIL -->
+        <div class="prayer-field">
+          <label for="prayer-email">
+            Email Address (Optional)
+          </label>
+
+          <input
+            type="email"
+            id="prayer-email"
+            name="Reply Email"
+            placeholder="Enter your email address"
+            autocomplete="email">
+        </div>
+
+        <!-- PRAYER REQUEST -->
+        <div class="prayer-field">
+          <label for="prayer-request">
+            Your Prayer Request *
+          </label>
+
+          <textarea
+            id="prayer-request"
+            name="Prayer Request"
+            rows="5"
+            placeholder="How can we pray for you?"
+            required></textarea>
+        </div>
+
+        <!-- CONSENT -->
+        <label class="prayer-consent">
+          <input
+            type="checkbox"
+            name="Privacy Consent"
+            value="Agreed"
+            required>
+
+          <span>
+            I agree to send my prayer request to Christ Is
+            TRUTH Baptist Church International for prayer
+            and pastoral care.
+          </span>
+        </label>
+
+        <!-- SUBMIT -->
+        <button type="submit" class="prayer-submit">
+          SEND PRAYER REQUEST
+        </button>
+
+        <p class="prayer-note">
+          Your request will be sent to the church email.
+          Please avoid including passwords or other
+          sensitive personal information.
+        </p>
+
+      </form>
+
     </div>
+  </section>
 
-    <!-- COMPLETE PRAYER FORM -->
-    <form
-      class="prayer-form"
-      action="https://formsubmit.co/citbc.intl@gmail.com"
-      method="POST">
-
-      <!-- EMAIL SETTINGS -->
-      <input
-        type="hidden"
-        name="_subject"
-        value="New Prayer Request - CITBC Website">
-
-      <input
-        type="hidden"
-        name="_template"
-        value="table">
-
-      <input
-        type="hidden"
-        name="_captcha"
-        value="true">
-
-      <!-- NAME -->
-      <div class="prayer-field">
-        <label for="prayer-name">
-          Your Name (Optional)
-        </label>
-
-        <input
-          type="text"
-          id="prayer-name"
-          name="Name"
-          placeholder="Enter your name"
-          autocomplete="name">
-      </div>
-
-      <!-- EMAIL -->
-      <div class="prayer-field">
-        <label for="prayer-email">
-          Email Address (Optional)
-        </label>
-
-        <input
-          type="email"
-          id="prayer-email"
-          name="Reply Email"
-          placeholder="Enter your email address"
-          autocomplete="email">
-      </div>
-
-      <!-- PRAYER REQUEST -->
-      <div class="prayer-field">
-        <label for="prayer-request">
-          Your Prayer Request *
-        </label>
-
-        <textarea
-          id="prayer-request"
-          name="Prayer Request"
-          rows="5"
-          placeholder="How can we pray for you?"
-          required></textarea>
-      </div>
-
-      <!-- PRIVACY CONSENT -->
-      <label class="prayer-consent">
-        <input
-          type="checkbox"
-          name="Privacy Consent"
-          value="Agreed"
-          required>
-
-        <span>
-          I agree to send my prayer request to Christ Is
-          Truth Baptist Church International for prayer
-          and pastoral care.
-        </span>
-      </label>
-
-      <!-- SUBMIT BUTTON -->
-      <button type="submit" class="prayer-submit">
-        SEND PRAYER REQUEST
-      </button>
-
-      <p class="prayer-note">
-        Your request will be sent to the church email.
-        Please avoid including passwords or other
-        sensitive personal information.
-      </p>
-
-    </form>
-    <!-- END PRAYER FORM -->
-
-  </div>
-</section>
-<!-- END PRAYER REQUEST SECTION -->
-
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER - WHITE BACKGROUND
+  ========================= -->
   <footer id="contact">
     <p>
-      Christ Is Truth Baptist Church International (CITBC)
+      <strong>Christ Is TRUTH Baptist Church International</strong>
     </p>
-    <p>
-      "Jesus Christ, the Rock Upon This House"
-    </p>
+
     <p>
       &copy; <span id="year">2026</span> CITBC.
       All rights reserved.
     </p>
   </footer>
 
-  <!-- MOBILE MENU SCRIPT -->
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
   <script>
+    // Mobile navigation menu
     const menuToggle = document.getElementById("menuToggle");
     const mainNav = document.getElementById("mainNav");
 
     menuToggle.addEventListener("click", function () {
       const isOpen = mainNav.classList.toggle("open");
 
-      menuToggle.setAttribute("aria-expanded", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+
       menuToggle.setAttribute(
         "aria-label",
         isOpen ? "Close navigation menu" : "Open navigation menu"
@@ -879,7 +931,7 @@
       menuToggle.textContent = isOpen ? "✕" : "☰";
     });
 
-    // Close the menu after clicking a navigation link.
+    // Close menu after clicking a navigation link
     mainNav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         mainNav.classList.remove("open");
@@ -889,7 +941,7 @@
       });
     });
 
-    // Automatically display the current year.
+    // Automatically update the copyright year
     document.getElementById("year").textContent =
       new Date().getFullYear();
   </script>
