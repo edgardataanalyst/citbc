@@ -164,79 +164,207 @@
       font-size: 15px;
     }
 
-    /* SECTION 1: HISTORY */
-    .history-section {
-      background: #ffffff;
-    }
+    
+/* CHURCH HISTORY - THREE COLUMNS */
+.history-section {
+  background: #ffffff;
+}
 
-    .history-description {
-      max-width: 900px;
-      margin: 0 auto 30px;
-      color: #596273;
-      font-size: 15px;
-      line-height: 1.9;
-      text-align: center;
-    }
+.history-timeline {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
 
-    /* Horizontal history gallery */
-    .history-gallery-wrap {
-      max-width: 1150px;
-      margin: 0 auto;
-    }
+.history-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e8ef;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(16, 33, 59, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
 
-    .history-gallery {
-      display: flex;
-      gap: 20px;
-      overflow-x: auto;
-      overflow-y: hidden;
-      padding: 8px 4px 18px;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: thin;
-      scrollbar-color: #c6a34e #edf0f5;
-    }
+.history-column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(16, 33, 59, 0.12);
+}
 
-    .history-gallery::-webkit-scrollbar {
-      height: 9px;
-    }
+.history-year {
+  padding: 22px 20px;
+  background: linear-gradient(135deg, #10213b, #203c60);
+  color: #f0d68c;
+  font-size: 34px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 2px;
+  border-bottom: 4px solid #c5a04b;
+}
 
-    .history-gallery::-webkit-scrollbar-track {
-      background: #edf0f5;
-      border-radius: 20px;
-    }
+.history-column-content {
+  padding: 27px 24px 30px;
+  flex: 1;
+}
 
-    .history-gallery::-webkit-scrollbar-thumb {
-      background: #c6a34e;
-      border-radius: 20px;
-    }
+.history-label {
+  display: inline-block;
+  color: #a17c2b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  margin-bottom: 9px;
+}
 
-    .history-card {
-      flex: 0 0 340px;
-      overflow: hidden;
-      scroll-snap-align: start;
-      border: 1px solid #e6e9ef;
-      border-radius: 12px;
-      background: #fff;
-      box-shadow: 0 6px 20px rgba(17,35,61,.08);
-    }
+.history-column-content h3 {
+  color: #10213b;
+  font-size: 22px;
+  line-height: 1.35;
+  margin-bottom: 16px;
+}
 
-    .history-image {
-      display: block;
-      width: 100%;
-      height: 245px;
-      object-fit: cover;
-      background: #edf0f5;
-    }
+.history-column-content p {
+  color: #606b7c;
+  font-size: 14px;
+  line-height: 1.85;
+  margin-bottom: 14px;
+}
 
+.history-column-content p:last-child {
+  margin-bottom: 0;
+}
 
+/* GALLERY HEADING */
+.history-gallery-heading {
+  text-align: center;
+  margin: 65px auto 25px;
+}
 
-    .gallery-hint {
-      margin-top: 8px;
-      text-align: center;
-      color: #7a8494;
-      font-size: 12px;
-    }
+.history-gallery-heading .eyebrow {
+  color: #a17c2b;
+}
+
+.history-gallery-heading h3 {
+  color: #10213b;
+  font-size: clamp(25px, 3vw, 34px);
+  margin-bottom: 8px;
+}
+
+.history-gallery-heading h3 span {
+  color: #a17c2b;
+}
+
+.history-gallery-heading > p:last-child {
+  color: #687386;
+  font-size: 14px;
+}
+
+/* HORIZONTAL PHOTO GALLERY */
+.history-gallery-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.history-gallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px 4px 18px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #c5a04b #edf0f5;
+}
+
+.history-gallery::-webkit-scrollbar {
+  height: 9px;
+}
+
+.history-gallery::-webkit-scrollbar-track {
+  background: #edf0f5;
+  border-radius: 20px;
+}
+
+.history-gallery::-webkit-scrollbar-thumb {
+  background: #c5a04b;
+  border-radius: 20px;
+}
+
+.history-card {
+  flex: 0 0 340px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  border: 1px solid #e5e8ef;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(16, 33, 59, 0.08);
+}
+
+.history-image {
+  display: block;
+  width: 100%;
+  height: 245px;
+  object-fit: cover;
+  background: #edf0f5;
+}
+
+.gallery-hint {
+  margin-top: 8px;
+  text-align: center;
+  color: #7a8494;
+  font-size: 12px;
+}
+
+/* TABLET */
+@media (max-width: 950px) {
+  .history-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .history-column:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .history-timeline {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .history-column:last-child {
+    grid-column: auto;
+  }
+
+  .history-year {
+    font-size: 30px;
+  }
+
+  .history-column-content {
+    padding: 24px 21px;
+  }
+
+  .history-gallery-heading {
+    margin-top: 45px;
+  }
+
+  .history-card {
+    flex-basis: 85%;
+  }
+
+  .history-image {
+    height: 220px;
+  }
+}
+
 
     /* SECTION 2: VISION & MISSION */
     .vision-section {
@@ -554,60 +682,155 @@ Our identity is no longer defined by who we were, but by whom we have become in 
 </section>
 
   <!-- SECTION 1: HISTORY GALLERY -->
-  <section class="section history-section" id="history">
+  
+<!-- SECTION 1: CHURCH HISTORY -->
+<section class="section history-section" id="history">
 
-    <div class="section-heading">
-      <p class="eyebrow">OUR BEGINNINGS</p>
-      <h2>Our <span>Seed Project 2010</span></h2>
-      <p>
-        During this time, Pastor Paul Tanchi, son of Pastor Peter Tanchi of Christ’s Commission Fellowship (CCF), envisioned expanding God’s Kingdom by initiating Bible studies in various AXEIA project sites—an outreach ministry known as the “Seed Project.”
-        Seeking to nurture spiritual growth among construction workers stationed in their subdivision developments, he looked for pastors who could lead these Bible study gatherings. One of these project sites was Alta Tierra Homes in General Mariano Alvarez, Cavite.
-        During the pioneering stage of the ministry, Engineer Pedro Mones worked alongside and assisted Pastor Domingo Ranay, helping lay the groundwork for what would eventually become a growing church.
-      </p>
-
-      <p>To support this mission, AXEIA coordinated with a nearby local church, Upon This Rock Fundamental Baptist Church in Monterverde Homes, led by the late Reverend David Sariga. 
-        Responding to the call, Pastor Sariga appointed Pastor Domingo Ranay to conduct regular Bible studies for the construction workers at the Alta Tierra project site. When the construction phase concluded and 
-        the workers were reassigned to other project locations, the Bible study did not end. Instead, it continued for the residents who had begun attending and expressed a desire to learn God’s Word.
-
-        What started as a simple weekly Bible instruction gradually developed into a consistent Sunday morning worship gathering. Through faithful Gospel preaching, discipleship, and outreach, 
-        several residents came to know Christ, families joined the fellowship, and the ministry steadily grew.
-
-​        In 2013, the congregation celebrated its first anniversary, marking its emergence as a thriving local church. Recognizing the need for organizational strength and legal identity, 
-        the church was formally registered with the Securities and Exchange Commission (SEC) in 2019, solidifying its status as an independent religious organization.</p>
-    </div>
-
-    <p class="history-description">
-      Explore moments from our church's journey of faith. Scroll horizontally to view more photographs.
+  <div class="section-heading">
+    <p class="eyebrow">OUR JOURNEY OF FAITH</p>
+    <h2>The History of <span>CITBC</span></h2>
+    <p>
+      From a humble Bible study to an established church,
+      our journey reflects God's grace, faithfulness, and
+      the transforming power of the Gospel.
     </p>
+  </div>
 
-    <div class="history-gallery-wrap">
-      <div class="history-gallery" aria-label="" tabindex="0">
+  <!-- THREE HISTORY COLUMNS -->
+  <div class="history-timeline">
 
-        <article class="history-card">
-          <img src="Images/history_1.jpg" alt="" class="history-image" loading="lazy">
-        </article>
-
-        <article class="history-card">
-          <img src="Images/history_2.jpg" alt="" class="history-image" loading="lazy">
-        </article>
-
-        <article class="history-card">
-          <img src="Images/history_3.jpg" alt="" class="history-image" loading="lazy">
-        </article>
-
-        <article class="history-card">
-          <img src="Images/history_4.jpg" alt="" class="history-image" loading="lazy">
-        </article>
-
-        <article class="history-card">
-          <img src="Images/history_5.jpg" alt="" class="history-image" loading="lazy">
-        </article>
-
+    <!-- HISTORY 1 -->
+    <article class="history-column">
+      <div class="history-year">2010</div>
+      <div class="history-column-content">
+        <span class="history-label">THE BEGINNING</span>
+        <h3>Our Seed Project</h3>
+        <p>
+          Pastor Paul Tanchi, son of Pastor Peter Tanchi of
+          Christ’s Commission Fellowship (CCF), envisioned
+          expanding God's Kingdom through Bible studies in
+          various AXEIA project sites. This outreach ministry
+          became known as the “Seed Project.”
+        </p>
+        <p>
+          One of these sites was Alta Tierra Homes in General
+          Mariano Alvarez, Cavite. Engineer Pedro Mones worked
+          alongside Pastor Domingo Ranay, helping establish
+          the foundation of the growing ministry.
+        </p>
       </div>
-      <p class="gallery-hint">← Scroll or swipe sideways to see more photos →</p>
+    </article>
+
+    <!-- HISTORY 2 -->
+    <article class="history-column">
+      <div class="history-year">2013</div>
+      <div class="history-column-content">
+        <span class="history-label">GROWING IN FAITH</span>
+        <h3>Our First Anniversary</h3>
+        <p>
+          AXEIA coordinated with Upon This Rock Fundamental
+          Baptist Church in Monterverde Homes, led by the late
+          Reverend David Sariga. Pastor Sariga appointed
+          Pastor Domingo Ranay to lead Bible studies for
+          construction workers at Alta Tierra.
+        </p>
+        <p>
+          When construction ended, the Bible study continued
+          among residents and gradually developed into regular
+          Sunday worship. In 2013, the congregation celebrated
+          its first anniversary.
+        </p>
+        <p>
+          In 2019, the church was formally registered with the
+          Securities and Exchange Commission (SEC), establishing
+          its legal identity as an independent religious organization.
+        </p>
+      </div>
+    </article>
+
+    <!-- HISTORY 3 -->
+    <article class="history-column">
+      <div class="history-year">2024</div>
+      <div class="history-column-content">
+        <span class="history-label">A NEW CHAPTER</span>
+        <h3>Our Own Acquired Property</h3>
+        <p>
+          Throughout its development, the church held worship
+          services in different locations, including a subdivision
+          clubhouse for five years and a residential unit for six years.
+        </p>
+        <p>
+          In 2024, the church moved to its own acquired property,
+          where it continues to conduct worship services and
+          minister to the community.
+        </p>
+        <p>
+          From a simple Bible study among construction workers
+          to an established church, CITBC continues its mission
+          of sharing God's Word and serving people through the
+          Gospel of Jesus Christ.
+        </p>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- HISTORY PHOTO GALLERY -->
+  <div class="history-gallery-heading">
+    <p class="eyebrow">MOMENTS TO REMEMBER</p>
+    <h3>Our History in <span>Pictures</span></h3>
+    <p>Scroll sideways to explore photographs from our journey.</p>
+  </div>
+
+  <div class="history-gallery-wrap">
+    <div class="history-gallery"
+         aria-label="Church history photo gallery"
+         tabindex="0">
+
+      <article class="history-card">
+        <img src="Images/history_1.jpg"
+             alt="CITBC historical photograph"
+             class="history-image"
+             loading="lazy">
+      </article>
+
+      <article class="history-card">
+        <img src="Images/history_2.jpg"
+             alt="CITBC historical photograph"
+             class="history-image"
+             loading="lazy">
+      </article>
+
+      <article class="history-card">
+        <img src="Images/history_3.jpg"
+             alt="CITBC historical photograph"
+             class="history-image"
+             loading="lazy">
+      </article>
+
+      <article class="history-card">
+        <img src="Images/history_4.jpg"
+             alt="CITBC historical photograph"
+             class="history-image"
+             loading="lazy">
+      </article>
+
+      <article class="history-card">
+        <img src="Images/history_5.jpg"
+             alt="CITBC historical photograph"
+             class="history-image"
+             loading="lazy">
+      </article>
+
     </div>
 
-  </section>
+    <p class="gallery-hint">
+      ← Scroll or swipe sideways to see more photos →
+    </p>
+  </div>
+
+</section>
+
 
   <!-- SECTION 2: VISION AND MISSION -->
   <section class="section vision-section" id="vision-mission">
