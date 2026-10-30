@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about the Fellowship Ministry of Christ Is TRUTH Baptist Church International.">
+  <title>Fellowship Ministry</title>
+  <style>
+    :root {
+      --navy: #071b3a;
+      --navy-light: #102d59;
+      --gold: #d8ad52;
+      --gold-light: #f2d58e;
+      --white: #ffffff;
+      --text: #263449;
+      --muted: #66758a;
+      --light: #f4f7fb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      background: var(--white);
+    }
+    a { text-decoration: none; }
+    .navbar {
+      min-height: 82px;
+      padding: 12px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      background: var(--navy);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; color: var(--white); }
+    .brand img { width: 55px; height: 55px; object-fit: contain; }
+    .brand-name { font-size: 15px; font-weight: 800; line-height: 1.25; letter-spacing: .3px; }
+    .brand-name span { display: block; color: var(--gold-light); font-size: 11px; font-weight: 500; margin-top: 4px; }
+    .nav-links { display: flex; flex-wrap: wrap; align-items: center; gap: 25px; }
+    .nav-links a { color: #fff; font-size: 13px; font-weight: 700; transition: color .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold-light); }
+    .hero {
+      min-height: 410px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 80px 7%;
+      color: var(--white);
+      background: linear-gradient(110deg, rgba(4,19,43,.91), rgba(7,27,58,.68)), url('Images/fellowship_ministry_1.jpg') center/cover no-repeat;
+    }
+    .hero-content { max-width: 850px; }
+    .eyebrow { color: var(--gold-light); text-transform: uppercase; letter-spacing: 3px; font-size: 12px; font-weight: 800; }
+    h1 { font-size: clamp(36px, 5vw, 58px); line-height: 1.12; margin: 14px 0 18px; }
+    .hero p { max-width: 700px; margin: 0 auto; color: #e7edf7; font-size: 17px; }
+    .section { padding: 76px 7%; }
+    .section-inner { max-width: 1120px; margin: auto; }
+    .section-heading { text-align: center; max-width: 760px; margin: 0 auto 42px; }
+    .section-heading .eyebrow { color: #a87920; }
+    h2 { color: var(--navy); font-size: clamp(28px, 3.5vw, 38px); line-height: 1.2; margin: 10px 0 14px; }
+    .section-heading p { color: var(--muted); }
+    .about-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
+    .about-copy h2 { margin-top: 0; }
+    .about-copy p { margin: 0 0 15px; color: #536176; }
+    .about-image {
+      min-height: 350px;
+      border-radius: 16px;
+      background: #e8edf4 url('Images/fellowship_ministry_1.jpg') center/cover no-repeat;
+      box-shadow: 0 16px 38px rgba(7,27,58,.14);
+    }
+    .focus-section { background: var(--light); }
+    .focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .focus-card {
+      background: #fff; border-radius: 13px; padding: 27px 24px;
+      border: 1px solid #e7ebf1; box-shadow: 0 8px 22px rgba(7,27,58,.045);
+    }
+    .focus-number { color: #b48632; font-size: 12px; font-weight: 800; letter-spacing: 1.5px; }
+    .focus-card h3 { color: var(--navy); font-size: 18px; margin: 9px 0 8px; }
+    .focus-card p { color: var(--muted); font-size: 14px; }
+    .verse-section { background: var(--navy); color: #fff; text-align: center; padding: 68px 7%; }
+    .verse-section blockquote { max-width: 850px; margin: auto; font-size: clamp(20px, 2.7vw, 27px); font-style: italic; line-height: 1.55; }
+    .verse-section .reference { color: var(--gold-light); font-weight: 800; margin-top: 18px; letter-spacing: 1px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .gallery-grid img { width: 100%; height: 245px; object-fit: cover; border-radius: 12px; background: #e8edf4; }
+    .cta { text-align: center; background: #f8f9fc; padding: 70px 7%; }
+    .cta p { color: var(--muted); max-width: 650px; margin: 0 auto 24px; }
+    .btn {
+      display: inline-block; padding: 13px 27px; border-radius: 5px;
+      background: var(--gold); color: var(--navy); font-size: 13px; font-weight: 800;
+      letter-spacing: .6px; transition: background .2s, transform .2s;
+    }
+    .btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+    footer { background: #041329; color: #cbd4e2; text-align: center; padding: 25px 7%; font-size: 12px; }
+    footer strong { color: #fff; }
+    @media (max-width: 850px) {
+      .navbar { flex-direction: column; padding: 16px 5%; }
+      .nav-links { justify-content: center; gap: 15px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-image { min-height: 300px; }
+      .focus-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .nav-links { gap: 10px 15px; }
+      .nav-links a { font-size: 12px; }
+      .section { padding: 58px 6%; }
+      .focus-grid, .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-grid img { height: 230px; }
+      .hero { min-height: 350px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="index.html">
+      <img src="Images/citbc_logo.png" alt="CITBC Logo">
+      <div class="brand-name">CHRIST IS TRUTH BAPTIST CHURCH<span>INTERNATIONAL</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">HOME</a>
+      <a href="about_us.html">ABOUT</a>
+      <a href="ministries.html" class="active">MINISTRIES</a>
+      <a href="contact_us.html">CONTACT</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Growing Together in Christ</div>
+      <h1>Fellowship Ministry</h1>
+      <p>Building meaningful relationships through Christian love, unity, encouragement, and shared faith in Jesus Christ.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="section-inner about-grid">
+        <div class="about-copy">
+          <div class="eyebrow">About the Ministry</div>
+          <h2>United in Faith. Connected in Love.</h2>
+          <p>The Fellowship Ministry provides opportunities for members and visitors to connect, encourage one another, and grow together as one church family. We believe that Christian fellowship is more than simply gathering together—it is sharing life, showing care, and strengthening one another through the love of Christ.</p>
+          <p>Through church gatherings, special activities, and meaningful conversations, we aim to build a welcoming community where everyone can feel valued, supported, and encouraged to continue walking with the Lord.</p>
+          <p>Our desire is to promote genuine relationships that strengthen the unity of the church and inspire every believer to serve God together.</p>
+        </div>
+        <div class="about-image" role="img" aria-label="Church fellowship gathering"></div>
+      </div>
+    </section>
+
+    <section class="section focus-section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow">What We Do</div>
+          <h2>Our Fellowship Activities</h2>
+          <p>We create opportunities for people to connect, care for one another, and build a stronger church family.</p>
+        </div>
+        <div class="focus-grid">
+          <article class="focus-card"><div class="focus-number">01 / CONNECTION</div><h3>Church Gatherings</h3><p>Creating welcoming opportunities for members and visitors to meet, connect, and enjoy Christian fellowship.</p></article>
+          <article class="focus-card"><div class="focus-number">02 / ENCOURAGEMENT</div><h3>Mutual Support</h3><p>Encouraging one another through prayer, kind words, and practical support during both joyful and difficult seasons.</p></article>
+          <article class="focus-card"><div class="focus-number">03 / UNITY</div><h3>Church Activities</h3><p>Organizing meaningful activities that help strengthen relationships and promote unity among the congregation.</p></article>
+          <article class="focus-card"><div class="focus-number">04 / WELCOME</div><h3>Welcoming Visitors</h3><p>Helping guests feel at home and introducing them to a caring community centered on Christ.</p></article>
+          <article class="focus-card"><div class="focus-number">05 / CARE</div><h3>Building Relationships</h3><p>Developing sincere friendships rooted in Christian love, respect, understanding, and concern for one another.</p></article>
+          <article class="focus-card"><div class="focus-number">06 / SERVICE</div><h3>Serving Together</h3><p>Inspiring members to work together, share their gifts, and participate in the life and mission of the church.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="verse-section">
+      <blockquote>“And let us consider one another to provoke unto love and to good works: Not forsaking the assembling of ourselves together...”</blockquote>
+      <div class="reference">HEBREWS 10:24–25 (KJV)</div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-heading">
+          <div class="eyebrow">Moments Together</div>
+          <h2>Fellowship Gallery</h2>
+          <p>Take a look at moments of connection, encouragement, and joy within our church family.</p>
+        </div>
+        <div class="gallery-grid">
+          <img src="Images/fellowship_ministry_1.jpg" alt="Fellowship Ministry activity 1">
+          <img src="Images/fellowship_ministry_2.jpg" alt="Fellowship Ministry activity 2">
+          <img src="Images/fellowship_ministry_3.jpg" alt="Fellowship Ministry activity 3">
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="eyebrow">You Are Welcome Here</div>
+      <h2>Be Part of Our Church Family</h2>
+      <p>We invite you to worship, connect, and grow with us. Follow our Facebook page for church updates, activities, and announcements.</p>
+      <a class="btn" href="https://www.facebook.com/christistruthbc" target="_blank" rel="noopener noreferrer">VISIT OUR FACEBOOK PAGE</a>
+    </section>
+  </main>
+
+  <footer>
+    <strong>CHRIST IS TRUTH BAPTIST CHURCH INTERNATIONAL</strong><br>
+    Growing in Faith • United in Christ • Serving with Love<br>
+    © 2026 CITBC. All Rights Reserved.
+  </footer>
+</body>
+</html>
