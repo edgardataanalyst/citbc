@@ -692,6 +692,32 @@
         transition: none !important;
       }
     }
+  
+    /* ANNOUNCEMENTS SECTION */
+    .announcements-section { padding: 75px 24px; background: #f8f7f3; scroll-margin-top: 30px; }
+    .announcements-container { max-width: 1100px; margin: auto; }
+    .announcements-heading { text-align: center; max-width: 700px; margin: 0 auto 38px; }
+    .announcements-label { color: #a47c27; font-size: 11px; font-weight: 800; letter-spacing: 2px; line-height: 1.7; margin-bottom: 12px; text-transform: uppercase; }
+    .announcements-heading h2 { color: #17243a; font-family: Georgia, "Times New Roman", serif; font-size: clamp(29px, 4vw, 40px); line-height: 1.2; margin-bottom: 14px; }
+    .announcements-heading h2 span { color: #b18b38; }
+    .announcements-heading p { color: #596273; font-size: 15px; line-height: 1.8; }
+    .announcement-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; max-width: 940px; margin: 0 auto; }
+    .announcement-card { display: flex; flex-direction: column; overflow: hidden; background: #fff; border: 1px solid #e8e5de; border-radius: 10px; box-shadow: 0 10px 28px rgba(16,29,50,.08); transition: transform .2s ease, box-shadow .2s ease; }
+    .announcement-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(16,29,50,.12); }
+    .announcement-image { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #e9e6df; }
+    .announcement-caption { display: flex; flex-direction: column; flex: 1; padding: 24px 25px 25px; border-top: 3px solid #d8b765; }
+    .announcement-tag { color: #a47c27; font-size: 10px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; margin-bottom: 9px; }
+    .announcement-card h3 { color: #17243a; font-family: Georgia, "Times New Roman", serif; font-size: 22px; line-height: 1.3; margin-bottom: 10px; }
+    .announcement-card p { color: #657084; font-size: 14px; line-height: 1.75; flex: 1; margin: 0; }
+    .announcement-link { display: inline-block; align-self: flex-start; margin-top: 18px; color: #947025; font-size: 11px; font-weight: 800; letter-spacing: .6px; text-decoration: none; }
+    .announcement-link:hover { color: #17243a; text-decoration: underline; }
+    @media (max-width: 700px) { .announcement-grid { grid-template-columns: 1fr; gap: 20px; max-width: 520px; } }
+    @media (max-width: 560px) {
+      .announcements-section { padding: 55px 17px; }
+      .announcement-caption { padding: 21px 20px 22px; }
+      .announcement-card h3 { font-size: 20px; }
+    }
+
   </style>
 </head>
 
@@ -727,6 +753,7 @@
 
     <nav id="mainNav">
       <a href="#home">Home</a>
+      <a href="#announcements">Announcements</a>
       <a href="about_us.html">About Us</a>
       <a href="ministries.html">Ministries</a>
       <a href="contact_us.html">Contact Us</a>
@@ -775,6 +802,58 @@
           </a>
         </div>
 
+      </div>
+    </section>
+
+    
+    <!-- ANNOUNCEMENTS SECTION -->
+    <section class="announcements-section" id="announcements">
+      <div class="announcements-container">
+        <div class="announcements-heading">
+          <p class="announcements-label">Stay informed and connected</p>
+          <h2>Church <span>Announcements</span></h2>
+          <p>Stay updated with the latest news, activities, and important announcements from Christ Is TRUTH Baptist Church International.</p>
+        </div>
+
+        <div class="announcement-grid">
+
+          <!--
+            UPCOMING WORSHIP SERVICE POSTER
+            Replace Images/announcements/worship-service.jpg with your poster image.
+            Recommended poster size: 1200 x 675 px (16:9).
+          -->
+          <article class="announcement-card">
+            <img
+              class="announcement-image"
+              src="Images/announcements/worship-service.jpg"
+              alt="Upcoming worship service announcement poster">
+            <div class="announcement-caption">
+              <span class="announcement-tag">Upcoming Worship Service</span>
+              <h3>Join Us in Worship</h3>
+              <p>Be part of our upcoming worship service as we gather to praise God, hear His Word, and grow together in faith. Check the poster for the schedule and details.</p>
+              <a class="announcement-link" href="https://www.facebook.com/christistruthbc" target="_blank" rel="noopener noreferrer">VIEW CHURCH UPDATES →</a>
+            </div>
+          </article>
+
+          <!--
+            CHURCH ACTIVITIES POSTER
+            Replace Images/announcements/church-activities.jpg with your activity poster.
+            Recommended poster size: 1200 x 675 px (16:9).
+          -->
+          <article class="announcement-card">
+            <img
+              class="announcement-image"
+              src="Images/announcements/church-activities.jpg"
+              alt="Church activities announcement poster">
+            <div class="announcement-caption">
+              <span class="announcement-tag">Church Activities</span>
+              <h3>Growing and Serving Together</h3>
+              <p>Stay connected with our church activities, fellowship gatherings, and ministry events. See the poster for the latest activity information.</p>
+              <a class="announcement-link" href="https://www.facebook.com/christistruthbc" target="_blank" rel="noopener noreferrer">SEE CHURCH ACTIVITIES →</a>
+            </div>
+          </article>
+
+        </div>
       </div>
     </section>
 
